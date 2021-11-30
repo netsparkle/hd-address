@@ -8,7 +8,7 @@ let HdWallet = require("./lib/base/hd.wallet.class")
 let AddressClass = require("./lib/base/address.class")
 
 let Address = {
-    BTC: require("./lib/jnga.address")
+    JNGA: require("./lib/jnga.address")
 }
 
 module.exports = {
