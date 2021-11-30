@@ -8,9 +8,7 @@ let HdWallet = require("./lib/base/hd.wallet.class")
 let AddressClass = require("./lib/base/address.class")
 
 let Address = {
-    BTC: require("./lib/btc.series.address"),
-    ETH: require("./lib/eth.address"),
-    TRX: require("./lib/trx.address")
+    BTC: require("./lib/jnga.address")
 }
 
 module.exports = {
@@ -37,14 +35,7 @@ module.exports = {
         }
         return {
             wallet: hd,
-            BTC: new Address.BTC(hd, "BTC"),
-            BTC_TEST: new Address.BTC(hd, "BTC", "TEST"),
-            BCH: new Address.BTC(hd, "BCH"),
-            BCH_TEST: new Address.BTC(hd, "BCH", "TEST"),
-            LTC: new Address.BTC(hd, "LTC"),
-            LTC_TEST: new Address.BTC(hd, "LTC", "TEST"),
-            ETH: new Address.ETH(hd),
-            TRX: new Address.TRX(hd),
+            JNGA: new Address.JNGA(hd, "JNGA"),
         }
     },
     mnemonic: MnemonicHD,
